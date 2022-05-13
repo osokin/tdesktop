@@ -970,8 +970,9 @@ win:
 release:
     cmake --build build --config RelWithDebInfo --parallel
 mac:
-    git clone -b 1.22.0 https://github.com/kcat/openal-soft.git
+    git clone https://github.com/kcat/openal-soft.git
     cd openal-soft
+    git checkout af8e756d
     CFLAGS=$UNGUARDED CPPFLAGS=$UNGUARDED cmake -B build . \\
         -D CMAKE_INSTALL_PREFIX:PATH=$USED_PREFIX \\
         -D ALSOFT_EXAMPLES=OFF \\
@@ -1243,9 +1244,9 @@ mac:
 stage('tg_owt', """
     git clone https://github.com/desktop-app/tg_owt.git
     cd tg_owt
-    git checkout 1fe5e68d99
+    git checkout bab760d7bd
     git submodule init
-    git submodule update src/third_party/libyuv
+    git submodule update src/third_party/libyuv src/third_party/crc32c/src
 win:
     SET MOZJPEG_PATH=$LIBS_DIR/mozjpeg
     SET OPUS_PATH=$USED_PREFIX/include/opus

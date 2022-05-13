@@ -316,7 +316,7 @@ infoProfileSeparatorPadding: margins(
 
 infoIconFg: windowBoldFg;
 infoIconInformation: icon {{ "info/info_information", infoIconFg }};
-infoIconRequests: icon {{ "info/edit/group_manage_join_requests", infoIconFg }};
+infoIconAddMember: icon {{ "info/info_add_member", infoIconFg }};
 infoIconNotifications: icon {{ "info/info_notifications", infoIconFg }};
 infoIconMediaPhoto: icon {{ "info/info_media_photo", infoIconFg }};
 infoIconMediaVideo: icon {{ "info/info_media_video", infoIconFg }};
@@ -327,13 +327,14 @@ infoIconMediaLink: icon {{ "info/info_media_link", infoIconFg }};
 infoIconMediaGroup: icon {{ "info/info_common_groups", infoIconFg }};
 infoIconMediaVoice: icon {{ "info/info_media_voice", infoIconFg }};
 infoIconMediaRound: icon {{ "info/info_media_round", infoIconFg }};
-infoIconRecentActions: icon {{ "info/edit/group_manage_actions", settingsIconFg }};
-infoIconAdministrators: icon {{ "info/edit/group_manage_admins", settingsIconFg }};
-infoIconInviteLinks: icon {{ "info/edit/group_manage_links", settingsIconFg }};
-infoIconReactions: icon {{ "info/edit/group_manage_reactions", settingsIconFg }};
-infoIconGroupType: icon {{ "info/edit/group_manage_type", settingsIconFg }};
-infoIconChannelType: icon {{ "info/edit/channel_manage_type", settingsIconFg }};
-infoIconSignature: icon {{ "info/edit/channel_manage_signature", settingsIconFg }};
+
+infoRoundedIconRequests: icon {{ "info/edit/group_manage_join_requests", settingsIconFg }};
+infoRoundedIconRecentActions: icon {{ "info/edit/group_manage_actions", settingsIconFg }};
+infoRoundedIconAdministrators: icon {{ "info/edit/group_manage_admins", settingsIconFg }};
+infoRoundedIconInviteLinks: icon {{ "info/edit/group_manage_links", settingsIconFg }};
+infoRoundedIconReactions: icon {{ "info/edit/group_manage_reactions", settingsIconFg }};
+infoRoundedIconSignature: icon {{ "info/edit/channel_manage_signature", settingsIconFg }};
+
 infoIconShare: icon {{ "info/info_share", infoIconFg }};
 infoIconEdit: icon {{ "info/info_edit", infoIconFg }};
 infoIconDelete: icon {{ "info/info_delete", infoIconFg }};
@@ -739,36 +740,6 @@ topBarConnectingAnimation: InfiniteRadialAnimation(defaultInfiniteRadialAnimatio
 }
 
 infoFeedLeaveIconMargins: margins(10px, 12px, 20px, 10px);
-
-separatePanelBorderCacheSize: 60px;
-separatePanelTitleHeight: 62px;
-separatePanelClose: IconButton(boxTitleClose) {
-	width: 60px;
-	height: 60px;
-
-	rippleAreaPosition: point(8px, 8px);
-	rippleAreaSize: 44px;
-	ripple: RippleAnimation(defaultRippleAnimation) {
-		color: windowBgOver;
-	}
-}
-separatePanelTitleFont: font(18px semibold);
-separatePanelTitle: FlatLabel(defaultFlatLabel) {
-	textFg: boxTitleFg;
-	maxHeight: 26px;
-	style: TextStyle(defaultTextStyle) {
-		font: separatePanelTitleFont;
-		linkFont: separatePanelTitleFont;
-		linkFontOver: font(18px semibold underline);
-	}
-}
-separatePanelTitleTop: 18px;
-separatePanelTitleLeft: 22px;
-separatePanelTitleSkip: 0px;
-separatePanelBack: IconButton(separatePanelClose) {
-	icon: infoTopBarBackIcon;
-	iconOver: infoTopBarBackIconOver;
-}
 
 inviteLinkField: FlatInput(defaultFlatInput) {
 	font: font(fsize);
